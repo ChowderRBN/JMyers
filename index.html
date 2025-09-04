@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Have Said It Three Times</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      text-align: center;
+      flex-direction: column; /* allows stacking image + text */
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      max-width: 800px;
+      margin: 1rem auto;
+      text-shadow: 0 0 15px #e94560, 0 0 30px #0f3460;
+      animation: pop 2s ease forwards;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .sub {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #f0a500;
+      text-shadow: 0 0 10px rgba(240,165,0,0.7);
+    }
+
+    img {
+      max-width: 300px; /* keeps image from being too huge */
+      border-radius: 15px; /* gives rounded edges */
+      box-shadow: 0 0 20px rgba(0,0,0,0.6); /* glowy effect */
+      margin-bottom: 1.5rem;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Replace "your-photo.jpg" with your actual file path or URL -->
+    <img src="JMyers.png" alt="Photo">
+    <h1>“Dive straight into Venom's Cinnamon rings”</h1>
+    <div class="sub">– Joseph</div>
+  </div>
+</body>
+</html>
